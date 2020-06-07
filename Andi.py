@@ -46,3 +46,7 @@ lblanio.grid(row=5, column=0)
 lblanio.config(padx=10, pady=10)
 txtanio=Entry(miFrame, textvariable =año)
 txtanio.grid(row=5, column=1)
+
+btnFuncion1 = Button(miFrame, text="Opcion 1", command = Funcion1, bg="blue", font="Arial")
+btnFuncion1.grid(row=6, column=0)
+btnFuncion1.config(padx=10, pady=10)
