@@ -66,3 +66,13 @@ btnFuncion4.config(padx=10, pady=10)
 btnFuncion5 = Button(miFrame, text = "Opcion 5", command = Funcion5, bg="blue", font="Arial")
 btnFuncion5.grid(row=8, column=0)
 btnFuncion5.config(padx=10, pady=10)
+
+def Funcion1 ():
+    M=int(dia.get())
+    N=int(mes.get())
+    O=int(año.get())
+    bindia=format(M, '0b' )
+    binmes=format(N, '0b')
+    binaño=format(O, '0b')
+
+    lblResp['text'] = "La fecha es: {}/{}/{} y  en binario es:{}/{}/{}".format(M,N,O,bindia,binmes,binaño)
