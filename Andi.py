@@ -62,3 +62,7 @@ btnFuncion3.config(padx=10, pady=10)
 btnFuncion4 = Button(miFrame, text = "Opcion 4", command = Funcion4, bg="blue", font="Arial")
 btnFuncion4.grid(row=7, column=1)
 btnFuncion4.config(padx=10, pady=10)
+
+btnFuncion5 = Button(miFrame, text = "Opcion 5", command = Funcion5, bg="blue", font="Arial")
+btnFuncion5.grid(row=8, column=0)
+btnFuncion5.config(padx=10, pady=10)
