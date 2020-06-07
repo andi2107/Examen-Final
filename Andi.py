@@ -105,3 +105,18 @@ def Funcion1 ():
         r2 = f"{sApellido} su Apellido es de número Inpar."
     respuesta = f"{r1} y  {r2} "
     lblResp.configure(text =respuesta )
+
+    def Funcion4():
+    sNombre = f"{nombre.get()}"
+    sApellido = f"{apellido.get()}"
+    cuenta = 0
+    for carac in sNombre:
+            if carac == 'a' or carac =='A' or carac =='e' or carac =='E' or carac =='i' or carac=='I' or carac=='o' or carac=="O" or carac=="u" or carac=="U":
+                cuenta += 1
+    for carac in sApellido:
+            if carac == 'a' or carac =='A' or carac =='e' or carac =='E' or carac =='i' or carac=='I' or carac=='o' or carac=="O" or carac=="u" or carac=="U":
+                cuenta += 1
+    cajita=len(sNombre)
+    cajita1=len(sApellido)
+    consonante=cajita+cajita1-cuenta
+    lblResp['text'] = 'Su nombre y apellido tienen {} vocales y {} consonantes'.format(cuenta,consonante)
