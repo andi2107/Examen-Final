@@ -87,3 +87,21 @@ def Funcion1 ():
     result1 = abs(d1-d2).days 
     respuesta = f"Usted nacio el {date_object} y ha vivido {result1} días."
     lblResp.configure(text = respuesta)
+
+    def Funcion3():
+    sNombre = f"{nombre.get()}"
+    sApellido = f"{apellido.get()}"
+    conteoN = len(sNombre)
+    conteoA = len(sApellido)
+  
+    if conteoN % 2 == 0:
+        r1 = f"{sNombre} su Nombre es de número Par"
+    else:
+        r1 = f"{sNombre} su Nombre es de número Inpar"
+
+    if conteoA % 2 == 0:
+        r2 = f"{sApellido} su Apellido es de número Par."
+    else:
+        r2 = f"{sApellido} su Apellido es de número Inpar."
+    respuesta = f"{r1} y  {r2} "
+    lblResp.configure(text =respuesta )
