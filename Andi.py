@@ -120,3 +120,8 @@ def Funcion1 ():
     cajita1=len(sApellido)
     consonante=cajita+cajita1-cuenta
     lblResp['text'] = 'Su nombre y apellido tienen {} vocales y {} consonantes'.format(cuenta,consonante)
+
+    def Funcion5():
+    cajita = nombre.get()+" "+apellido.get()
+    cajita = cajita[::-1]
+    lblResp["text"] = nombre.get() + " " + apellido.get() + " al revés es: " + cajita
