@@ -50,3 +50,7 @@ txtanio.grid(row=5, column=1)
 btnFuncion1 = Button(miFrame, text="Opcion 1", command = Funcion1, bg="blue", font="Arial")
 btnFuncion1.grid(row=6, column=0)
 btnFuncion1.config(padx=10, pady=10)
+
+btnFuncion2 = Button(miFrame, text = "Opcion 2", command= Funcion2, bg="blue", font="Arial")
+btnFuncion2.grid(row=6, column=1)
+btnFuncion2.config(padx=10, pady=10)
