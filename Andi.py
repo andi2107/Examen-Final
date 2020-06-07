@@ -17,6 +17,30 @@ dia = IntVar()
 mes = IntVar()
 año = IntVar()
 
+def Funcion1 ():
+    M=int(dia.get())
+    N=int(mes.get())
+    O=int(año.get())
+    bindia=format(M, '0b' )
+    binmes=format(N, '0b')
+    binaño=format(O, '0b')
+
+    lblResp['text'] = "La fecha es: {}/{}/{} y  en binario es:{}/{}/{}".format(M,N,O,bindia,binmes,binaño)
+
+def Funcion2():
+    fechaString = f"{año.get()}-{mes.get()}-{dia.get()}"
+    date_object = datetime.strptime(fechaString, '%Y-%m-%d')
+
+    today= datetime.today()
+    d1 = today
+    d2 = date_object
+    result1 = abs(d1-d2).days 
+    respuesta = f"Usted nacio el {date_object} y ha vivido {result1} días."
+    lblResp.configure(text = respuesta)
+
+
+
+
 lblnombre= Label(miFrame, text="Nombre:", bg="red")
 lblnombre.grid(row=1, column=0)
 lblnombre.config(padx=10, pady=10)
@@ -67,27 +91,9 @@ btnFuncion5 = Button(miFrame, text = "Opcion 5", command = Funcion5, bg="blue", 
 btnFuncion5.grid(row=8, column=0)
 btnFuncion5.config(padx=10, pady=10)
 
-def Funcion1 ():
-    M=int(dia.get())
-    N=int(mes.get())
-    O=int(año.get())
-    bindia=format(M, '0b' )
-    binmes=format(N, '0b')
-    binaño=format(O, '0b')
 
-    lblResp['text'] = "La fecha es: {}/{}/{} y  en binario es:{}/{}/{}".format(M,N,O,bindia,binmes,binaño)
 
-    def Funcion2():
-    fechaString = f"{año.get()}-{mes.get()}-{dia.get()}"
-    date_object = datetime.strptime(fechaString, '%Y-%m-%d')
-
-    today= datetime.today()
-    d1 = today
-    d2 = date_object
-    result1 = abs(d1-d2).days 
-    respuesta = f"Usted nacio el {date_object} y ha vivido {result1} días."
-    lblResp.configure(text = respuesta)
-
+    
     def Funcion3():
     sNombre = f"{nombre.get()}"
     sApellido = f"{apellido.get()}"
