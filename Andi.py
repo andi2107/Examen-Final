@@ -76,3 +76,14 @@ def Funcion1 ():
     binaño=format(O, '0b')
 
     lblResp['text'] = "La fecha es: {}/{}/{} y  en binario es:{}/{}/{}".format(M,N,O,bindia,binmes,binaño)
+
+    def Funcion2():
+    fechaString = f"{año.get()}-{mes.get()}-{dia.get()}"
+    date_object = datetime.strptime(fechaString, '%Y-%m-%d')
+
+    today= datetime.today()
+    d1 = today
+    d2 = date_object
+    result1 = abs(d1-d2).days 
+    respuesta = f"Usted nacio el {date_object} y ha vivido {result1} días."
+    lblResp.configure(text = respuesta)
